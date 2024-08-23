@@ -12,6 +12,16 @@ $authenticated = false;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"  />
   <script src="https://cdn.tailwindcss.com"></script>
+<style>
+.hero{
+    background-image: url('https://img.freepik.com/free-photo/study-group-african-people_23-2149156368.jpg?t=st=1724417122~exp=1724420722~hmac=d0ba196289219f3526f7ca85ec5eb9f3be535c5f06becb2fe41b67de5960538a&w=740');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    
+}
+</style>
+  <title>minimalist</title>
 </head>
 <body>
  <!-- navigation bar -->
@@ -48,6 +58,21 @@ if($authenticated){
         
     </div>
 </div>
+ </div>
+
+ <!-- hero section -->
+
+ <div class="w-full lg:pt-12 lg:pl-12  hero h-[520px]">
+    <div class="lg:w-1/3 sm:w-4/5 md:w-2/3   px-8 py-10   h-full bg-[#2598BC]">
+        <h1 class="text-white font-bold text-6xl flex flex-col  capitalize ">
+            <span>child</span>
+            <span>education</span>
+        </h1>
+        <p class="text-white font-semibold text-5xl py-1 tracking-wide">Insurance</p>
+        <p class="text-white font-semibold py-2 text-lg">Understanding how insurance works can help you choose a policy.
+             For instance,your coverage may or may not be the right type of auto insurance for you.</p>
+             <button class="text-[#38b6ff] px-7 py-2 bg-slate-200 rounded">Get Started</button>
+    </div>
  </div>
 
 <script>
