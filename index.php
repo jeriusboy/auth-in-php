@@ -75,6 +75,13 @@ if($authenticated){
     </div>
  </div>
 
+ <!-- footer -->
+ <div class="w-full bg-slate-200 text-[#38b6ff] py-1 px-4 flex justify-between text-center">
+    <div class="w-full">
+        
+        <p class="py-2 text-center">Copyright &copy; 2022. All Rights Reserved</p>
+    </div>
+    <div>
 <script>
     const dropdown = document.querySelector('.dropdown'); 
 
