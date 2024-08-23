@@ -27,7 +27,10 @@ $authenticated = false;
  <!-- navigation bar -->
  <div class=" relative">
  <div class="flex  justify-around items-center w-full bg-slate-200  py-3">
+<div class="flex gap-x-4 items-center">
  <h1 class="text-[#38b6ff] font-bold uppercase text-3xl ">minimalist</h1>
+ <a href="index.php" class="text-cyan-900 font-semibold capitalize text-lg px-5 ">home</a></a>
+ </div>
  <div class ="flex">
     <?php
 if($authenticated){
@@ -41,8 +44,8 @@ if($authenticated){
 }else{
     ?>
     <div class ="flex gap-x-4">
-        <a href="" class="px-7 py-2 bg-[#38b6ff] text-white rounded">Login</a>
-        <a href="" class="px-7 py-2 bg-[#38b6ff] text-white rounded">Register</a>
+        <a href="/auth_php/login.php" class="px-7 py-2 bg-[#38b6ff] text-white rounded">Login</a>
+        <a href="/auth_php/register.php" class="px-7 py-2 bg-[#38b6ff] text-white rounded">Register</a>
     </div>
     <?php } ?>
  </div>
