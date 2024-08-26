@@ -1,4 +1,26 @@
 <?php
+// check if user is already logged in and redirect to index.php
+
+if(isset($_SESSION['email'])) {
+    header("Location: index.php");
+    exit;
+}
+
+$email = "";
+$error = "";
+$password = "";
+
+
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    $email = $_POST['email'];
+    // $password = $_POST['password'];
+
+    // check if email and password are not empty
+    if(empty($email) || empty($password)){
+        $error = "Please enter email and password";
+    }
+}
+
 session_start();
 $authenticated = false;
 ?>
@@ -53,15 +75,22 @@ if($authenticated){
 
  <!-- hero section -->
 
- <div class="w-full lg:pt-20 lg:pb-[135px] lg:pl-12   flex justify-center  ">
+ <div class="w-full lg:pt-20 lg:pb-[135px] lg:pl-12   flex justify-center   ">
+
+ 
 <form action="" method="post" class="w-1/3  h-auto bg-slate-100 rounded"> 
     <div class="py-4 bg-[#2598BC]">
     <h1 class="text-center font-bold text-3xl text-white">Login</h1> 
     </div> 
-    <div class="px-4 py-8 bg-cyan-900 w-full gap-y-2">
-     <input type="email" name="" value="" class="w-full border-1 border-cyan-900 outline-none p-2  my-2">
-     <input type="password" name="" value="" class="w-full border-1 border-cyan-900 outline-none p-2 my-2">
+    <div class="px-4 py-8 bg-cyan-900 w-full gap-y-2 text-center ">
+    <?php if(!empty($error)) {?>
+     <span class="text-red-500 text-sm  font-semibold  mb-2"><?php echo $error ?></span>
+     <?php }?>
+     <input type="email" name="email" value="<?php echo $email; ?>" placeholder="email" class="w-full border-1 border-cyan-900 outline-none p-2  my-2">
+     <input type="password" name="" value="" placeholder="password" class="w-full border-1 border-cyan-900 outline-none p-2 my-2">
+     
      <div class="flex justify-end">
+
      <input type="submit" name="" value="submit" class="px-7 mt-4 py-2.5 bg-[#38b6ff] text-white rounded">
      </div>
     </div>

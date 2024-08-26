@@ -2,6 +2,11 @@
 <?php
 session_start();
 $authenticated = false;
+
+if(isset($_SESSION['email'])) {
+    $authenticated = true;
+}
+
 ?>
 
 
@@ -57,7 +62,7 @@ if($authenticated){
    <a href="" class="cursor-pointer capitalize hover:text-[#38b6ff] font-semibold text-lg  ">profile</a><br>    
     </div>  
     <div class="w-full ">
-   <button type="button" class="cursor-pointer capitalize hover:text-[#38b6ff] font-semibold text-lg ">logout</button>
+   <a href="/auth_php/logout.php" class="cursor-pointer capitalize hover:text-[#38b6ff] font-semibold text-lg ">logout</a>
         
     </div>
 </div>
